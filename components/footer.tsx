@@ -12,7 +12,7 @@ export function Footer() {
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                 <Wrench className="w-6 h-6 text-accent-foreground" />
               </div>
-              <span className="text-xl font-bold">ToolMart</span>
+              <span className="text-xl font-bold">TiwariTools</span>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Your trusted local shop for wholesale and retail tools, power tools, kitchen and agriculture supplies.
@@ -98,26 +98,26 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                 <span className="text-primary-foreground/80 text-sm">
-                  123 Industrial Area, Main Market
+                  Bhalu market , Mora road , Bhagwanpur Hatt
                   <br />
-                  City Name, State - 123456
+                  Siwan, Bihar - 841408
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <a href="tel:+911234567890" className="text-primary-foreground/80 hover:text-accent text-sm">
-                  +91 12345 67890
+                  +91 6206507964
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
                 <a href="mailto:info@toolmart.com" className="text-primary-foreground/80 hover:text-accent text-sm">
-                  info@toolmart.com
+                  info@tiwaritools.com
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Clock className="w-5 h-5 text-accent shrink-0" />
-                <span className="text-primary-foreground/80 text-sm">Mon - Sat: 9AM - 8PM</span>
+                <span className="text-primary-foreground/80 text-sm">Mon - Sun: 8AM - 9PM</span>
               </li>
             </ul>
           </div>
@@ -125,7 +125,7 @@ export function Footer() {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © {new Date().getFullYear()} ToolMart. All rights reserved.
+            © {new Date().getFullYear()} TiwariTools. All rights reserved.
           </p>
         </div>
       </div>

@@ -10,7 +10,7 @@ import { MobileBottomBar } from "@/components/mobile-bottom-bar"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "ToolMart - Wholesale & Retail Tools, Power Tools, Kitchen & Agriculture Supplies",
+  title: "TiwariTools & PowerTools - Wholesale & Retail Tools, Power Tools, Kitchen & Agriculture Supplies",
   description:
     "Your trusted local shop for wholesale and retail tools, power tools, kitchen and agriculture supplies. Quality products at competitive prices.",
   keywords: [

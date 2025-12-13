@@ -2,7 +2,7 @@ import Image from "next/image"
 import { CheckCircle, Users, Clock, Award } from "lucide-react"
 
 export const metadata = {
-  title: "About Us - ToolMart",
+  title: "About Us - TiwariTools",
   description:
     "Learn about ToolMart - your trusted local wholesale and retail tools supplier with over 20 years of experience",
 }
@@ -42,7 +42,7 @@ export default function AboutPage() {
               projects, we have got you covered with our extensive inventory and knowledgeable staff.
             </p>
           </div>
-          <div className="relative h-80 lg:h-[500px] rounded-2xl overflow-hidden">
+          <div className="relative h-80 lg:h-125 rounded-2xl overflow-hidden">
             <Image src="/placeholder.svg?height=500&width=600" alt="ToolMart Shop" fill className="object-cover" />
           </div>
         </div>

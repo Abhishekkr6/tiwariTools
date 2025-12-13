@@ -2,7 +2,7 @@ import { MapPin, Phone, Clock, Mail, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export const metadata = {
-  title: "Contact Us - ToolMart",
+  title: "Contact Us - TiwariTools",
   description: "Visit our shop or get in touch via phone or WhatsApp for product enquiries",
 }
 
@@ -10,24 +10,24 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Our Shop",
-    details: ["123 Industrial Area, Main Market", "City Name, State - 123456"],
+    details: ["Bhalu market , Mora road , Bhagwanpur Hatt", "Siwan, Bihar - 841408"],
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+91 12345 67890", "+91 09876 54321"],
-    links: ["tel:+911234567890", "tel:+910987654321"],
+    details: ["+91 6206507964", "+91 9801481529"],
+    links: ["tel:+916206507964", "tel:+919801481529"],
   },
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@toolmart.com", "sales@toolmart.com"],
-    links: ["mailto:info@toolmart.com", "mailto:sales@toolmart.com"],
+    details: ["info@tiwaritools.com", "sales@tiwaritools.com"],
+    links: ["mailto:info@tiwaritools.com", "mailto:sales@tiwaritools.com"],
   },
   {
     icon: Clock,
     title: "Business Hours",
-    details: ["Monday - Saturday: 9:00 AM - 8:00 PM", "Sunday: 10:00 AM - 4:00 PM"],
+    details: ["Monday - Saturday: 8:00 AM - 9:00 PM", "Sunday: 10:00 AM - 4:00 PM"],
   },
 ]
 
@@ -78,7 +78,7 @@ export default function ContactPage() {
           </p>
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8" asChild>
             <a
-              href="https://wa.me/911234567890?text=Hi, I would like to enquire about your products"
+              href="https://wa.me/916206507964?text=Hi, I would like to enquire about your products"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
@@ -94,18 +94,17 @@ export default function ContactPage() {
           <div className="p-6 border-b border-border">
             <h2 className="text-xl font-semibold text-foreground">Find Us on Map</h2>
           </div>
-          <div className="relative h-80 md:h-[400px] bg-muted">
+          <div className="relative h-80 md:h-100 bg-muted">
             {/* Google Maps Embed Placeholder */}
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.234567890123!2d72.12345678901234!3d19.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiA3MsKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123"
               width="100%"
               height="100%"
-              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="ToolMart Location"
-              className="absolute inset-0"
+              title="TiwariTools Location"
+              className="absolute inset-0 borderless-iframe"
             />
           </div>
         </div>

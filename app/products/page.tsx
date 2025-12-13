@@ -4,7 +4,7 @@ import { categories } from "@/data/products"
 import { ArrowRight } from "lucide-react"
 
 export const metadata = {
-  title: "Products - ToolMart",
+  title: "Products - TiwariTools",
   description: "Browse our complete range of tools, power tools, kitchen and agriculture supplies",
 }
 
@@ -36,7 +36,7 @@ export default function ProductsPage() {
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute bottom-6 left-6 right-6">
                   <h2 className="text-2xl font-bold text-white mb-2">{category.name}</h2>
                 </div>

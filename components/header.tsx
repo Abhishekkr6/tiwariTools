@@ -24,7 +24,7 @@ export function Header() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <Wrench className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold text-primary">ToolMart</span>
+            <span className="text-xl font-bold text-primary">TiwariTools</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -43,14 +43,14 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Button variant="outline" size="sm" asChild>
-              <a href="tel:+911234567890" className="flex items-center gap-2">
+              <a href="tel:+916206507964" className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
                 Call Now
               </a>
             </Button>
             <Button size="sm" className="bg-accent hover:bg-accent/90" asChild>
               <a
-                href="https://wa.me/911234567890?text=Hi, I would like to enquire about your products"
+                href="https://wa.me/916206507964?text=Hi, I would like to enquire about your products"
                 target="_blank"
                 rel="noopener noreferrer"
               >

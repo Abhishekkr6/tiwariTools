@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: CategoryPageProps) {
   if (!category) return { title: "Category Not Found" }
 
   return {
-    title: `${category.name} - ToolMart`,
+    title: `${category.name} - TiwariTools`,
     description: category.description,
   }
 }

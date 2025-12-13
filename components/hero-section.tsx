@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5">
+    <section className="relative overflow-hidden bg-linear-to-br from-primary/5 via-background to-accent/5">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
@@ -35,7 +35,7 @@ export function HeroSection() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8" asChild>
               <a
-                href="https://wa.me/911234567890?text=Hi, I would like to enquire about your products"
+                href="https://wa.me/916206507964?text=Hi, I would like to enquire about your products"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
@@ -45,7 +45,7 @@ export function HeroSection() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent" asChild>
-              <a href="tel:+911234567890" className="flex items-center gap-2">
+              <a href="tel:+916206507964" className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>
