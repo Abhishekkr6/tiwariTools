@@ -1,0 +1,484 @@
+export type Product = {
+  id: string
+  name: string
+  category: string
+  image: string
+  description: string
+  useCase: string
+  tags: string[]
+}
+
+export type Category = {
+  id: string
+  name: string
+  description: string
+  icon: string
+  image: string
+}
+
+export const categories: Category[] = [
+  {
+    id: "hand-tools",
+    name: "Hand Tools",
+    description: "Essential manual tools for every professional and DIY enthusiast",
+    icon: "🔧",
+    image: "/hand-tools-collection-hammers-wrenches.jpg",
+  },
+  {
+    id: "power-tools",
+    name: "Power Tools",
+    description: "High-performance electric and battery-powered tools",
+    icon: "⚡",
+    image: "/power-tools-drill-grinder-collection.jpg",
+  },
+  {
+    id: "electrical-tools",
+    name: "Electrical Tools",
+    description: "Specialized tools for electrical work and wiring",
+    icon: "💡",
+    image: "/electrical-tools-testers-wire-strippers.jpg",
+  },
+  {
+    id: "hardware-items",
+    name: "Hardware Items",
+    description: "Fasteners, fittings, and essential hardware supplies",
+    icon: "🔩",
+    image: "/hardware-screws-nuts-bolts-collection.jpg",
+  },
+  {
+    id: "kitchen-home",
+    name: "Kitchen & Home Utility",
+    description: "Quality cookware and home utility items",
+    icon: "🍳",
+    image: "/kitchen-cookware-utensils-pans.jpg",
+  },
+  {
+    id: "agriculture-tools",
+    name: "Agriculture Tools",
+    description: "Farming and gardening equipment for all scales",
+    icon: "🌾",
+    image: "/agriculture-farming-tools-sprayer-sickle.jpg",
+  },
+]
+
+export const products: Product[] = [
+  // Hand Tools
+  {
+    id: "ht-001",
+    name: "Professional Claw Hammer",
+    category: "hand-tools",
+    image: "/professional-claw-hammer-tool.jpg",
+    description: "Heavy-duty steel head with ergonomic rubber grip handle for comfortable use",
+    useCase: "Ideal for carpentry, construction, and general household repairs",
+    tags: ["hammer", "carpentry", "construction"],
+  },
+  {
+    id: "ht-002",
+    name: "Adjustable Wrench Set",
+    category: "hand-tools",
+    image: "/adjustable-wrench-set-chrome.jpg",
+    description: "Chrome vanadium steel construction with precision jaw adjustment",
+    useCase: "Perfect for plumbing, automotive, and mechanical work",
+    tags: ["wrench", "plumbing", "automotive"],
+  },
+  {
+    id: "ht-003",
+    name: "Combination Pliers",
+    category: "hand-tools",
+    image: "/combination-pliers-tool.jpg",
+    description: "Multi-purpose pliers with cutting edge and wire gripping jaws",
+    useCase: "Essential for electrical work, gripping, and cutting tasks",
+    tags: ["pliers", "electrical", "multipurpose"],
+  },
+  {
+    id: "ht-004",
+    name: "Screwdriver Set (12pc)",
+    category: "hand-tools",
+    image: "/screwdriver-set-12-piece.jpg",
+    description: "Complete set with Phillips and flathead in various sizes",
+    useCase: "For assembly, repairs, and maintenance of appliances and furniture",
+    tags: ["screwdriver", "assembly", "repair"],
+  },
+  {
+    id: "ht-005",
+    name: "Pipe Wrench 14-inch",
+    category: "hand-tools",
+    image: "/pipe-wrench-plumbing-tool.jpg",
+    description: "Heavy-duty cast iron construction with adjustable jaw",
+    useCase: "Professional plumbing and pipe fitting applications",
+    tags: ["wrench", "plumbing", "pipe"],
+  },
+  {
+    id: "ht-006",
+    name: "Wire Cutter Heavy Duty",
+    category: "hand-tools",
+    image: "/wire-cutter-heavy-duty-tool.jpg",
+    description: "Hardened steel blades for clean cuts through various wire gauges",
+    useCase: "Electrical wiring, fencing, and cable cutting",
+    tags: ["cutter", "wire", "electrical"],
+  },
+  {
+    id: "ht-007",
+    name: "Measuring Tape 5m",
+    category: "hand-tools",
+    image: "/measuring-tape-5-meter.jpg",
+    description: "Durable ABS case with auto-lock and belt clip",
+    useCase: "Accurate measurements for construction and DIY projects",
+    tags: ["measuring", "tape", "construction"],
+  },
+  {
+    id: "ht-008",
+    name: "Hacksaw Frame with Blade",
+    category: "hand-tools",
+    image: "/hacksaw-frame-metal-cutting.jpg",
+    description: "Adjustable frame fits multiple blade lengths, includes HSS blade",
+    useCase: "Metal cutting, PVC pipes, and general workshop use",
+    tags: ["hacksaw", "cutting", "metal"],
+  },
+
+  // Power Tools
+  {
+    id: "pt-001",
+    name: "Cordless Drill 20V",
+    category: "power-tools",
+    image: "/cordless-drill-20v-power-tool.jpg",
+    description: "Lithium-ion battery with 2-speed gearbox and LED work light",
+    useCase: "Drilling and driving in wood, metal, and plastic materials",
+    tags: ["drill", "cordless", "battery"],
+  },
+  {
+    id: "pt-002",
+    name: "Angle Grinder 4.5-inch",
+    category: "power-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "850W motor with adjustable guard and spindle lock",
+    useCase: "Cutting, grinding, and polishing metal and masonry",
+    tags: ["grinder", "cutting", "metal"],
+  },
+  {
+    id: "pt-003",
+    name: "Circular Saw 7-inch",
+    category: "power-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "1400W motor with adjustable depth and bevel cuts",
+    useCase: "Straight cuts in wood, plywood, and sheet materials",
+    tags: ["saw", "circular", "wood"],
+  },
+  {
+    id: "pt-004",
+    name: "Impact Wrench Electric",
+    category: "power-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "High torque output with variable speed control",
+    useCase: "Automotive repairs, tire changes, and heavy fastening",
+    tags: ["wrench", "impact", "automotive"],
+  },
+  {
+    id: "pt-005",
+    name: "Heat Gun Professional",
+    category: "power-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Dual temperature settings with multiple nozzle attachments",
+    useCase: "Paint stripping, shrink wrapping, and plastic welding",
+    tags: ["heat gun", "stripping", "welding"],
+  },
+  {
+    id: "pt-006",
+    name: "Jigsaw Variable Speed",
+    category: "power-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "600W motor with orbital action and dust blower",
+    useCase: "Curved and intricate cuts in wood and soft metals",
+    tags: ["jigsaw", "cutting", "curves"],
+  },
+  {
+    id: "pt-007",
+    name: "Welding Machine Arc 200A",
+    category: "power-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Inverter technology with adjustable current and thermal protection",
+    useCase: "Metal fabrication, repairs, and construction welding",
+    tags: ["welding", "arc", "metal"],
+  },
+  {
+    id: "pt-008",
+    name: "Electric Blower 600W",
+    category: "power-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Variable speed control with dust bag attachment",
+    useCase: "Workshop cleaning, leaf blowing, and debris removal",
+    tags: ["blower", "cleaning", "workshop"],
+  },
+
+  // Electrical Tools
+  {
+    id: "et-001",
+    name: "Digital Multimeter",
+    category: "electrical-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Auto-ranging with backlit display and multiple measurement modes",
+    useCase: "Testing voltage, current, resistance, and continuity",
+    tags: ["multimeter", "testing", "electrical"],
+  },
+  {
+    id: "et-002",
+    name: "Wire Stripper Automatic",
+    category: "electrical-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Self-adjusting mechanism strips various wire gauges",
+    useCase: "Quick and precise wire stripping for electrical work",
+    tags: ["stripper", "wire", "automatic"],
+  },
+  {
+    id: "et-003",
+    name: "Voltage Tester Pen",
+    category: "electrical-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Non-contact detection with LED and sound indicator",
+    useCase: "Safe voltage detection in outlets and wiring",
+    tags: ["tester", "voltage", "safety"],
+  },
+  {
+    id: "et-004",
+    name: "Extension Cord 10m",
+    category: "electrical-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Heavy-duty cord with multiple outlets and surge protection",
+    useCase: "Power extension for workshops and outdoor use",
+    tags: ["extension", "cord", "power"],
+  },
+  {
+    id: "et-005",
+    name: "Crimping Tool Set",
+    category: "electrical-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Complete set for various terminal types with ratchet mechanism",
+    useCase: "Creating secure electrical connections and terminals",
+    tags: ["crimping", "terminals", "connections"],
+  },
+  {
+    id: "et-006",
+    name: "Cable Tie Gun",
+    category: "electrical-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Professional tensioning and cutting tool for cable ties",
+    useCase: "Fast and secure cable management and bundling",
+    tags: ["cable tie", "bundling", "management"],
+  },
+
+  // Hardware Items
+  {
+    id: "hw-001",
+    name: "Screw Assortment Box",
+    category: "hardware-items",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "500+ pieces including wood, machine, and self-tapping screws",
+    useCase: "General repairs, assembly, and construction projects",
+    tags: ["screws", "assortment", "fasteners"],
+  },
+  {
+    id: "hw-002",
+    name: "Anchor Bolt Set",
+    category: "hardware-items",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Various sizes for concrete and masonry applications",
+    useCase: "Secure mounting in concrete walls and floors",
+    tags: ["anchors", "bolts", "concrete"],
+  },
+  {
+    id: "hw-003",
+    name: "Door Hinges (Pack of 6)",
+    category: "hardware-items",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Stainless steel construction with ball bearings",
+    useCase: "Door installation and replacement",
+    tags: ["hinges", "door", "installation"],
+  },
+  {
+    id: "hw-004",
+    name: "Padlock Heavy Duty",
+    category: "hardware-items",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Hardened steel shackle with weather-resistant body",
+    useCase: "Securing gates, storage units, and equipment",
+    tags: ["padlock", "security", "lock"],
+  },
+  {
+    id: "hw-005",
+    name: "Cabinet Handles (10pc)",
+    category: "hardware-items",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Modern design in brushed nickel finish",
+    useCase: "Kitchen and furniture cabinet upgrades",
+    tags: ["handles", "cabinet", "furniture"],
+  },
+  {
+    id: "hw-006",
+    name: "Chain Link 5m",
+    category: "hardware-items",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Galvanized steel chain for indoor and outdoor use",
+    useCase: "Securing, hanging, and general purpose applications",
+    tags: ["chain", "steel", "securing"],
+  },
+
+  // Kitchen & Home Utility
+  {
+    id: "kh-001",
+    name: "Kadhai Deep Fry Pan",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Heavy gauge aluminum with non-stick coating",
+    useCase: "Deep frying, stir-frying, and traditional Indian cooking",
+    tags: ["kadhai", "frying", "cooking"],
+  },
+  {
+    id: "kh-002",
+    name: "Pressure Cooker 5L",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Stainless steel body with safety valve and gasket",
+    useCase: "Fast cooking of rice, dal, meat, and vegetables",
+    tags: ["cooker", "pressure", "cooking"],
+  },
+  {
+    id: "kh-003",
+    name: "Non-Stick Tawa",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Premium non-stick surface with heat-resistant handle",
+    useCase: "Making rotis, parathas, dosas, and pancakes",
+    tags: ["tawa", "non-stick", "roti"],
+  },
+  {
+    id: "kh-004",
+    name: "Stainless Steel Pot Set",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "3-piece set with lids in various sizes",
+    useCase: "Boiling, simmering, and general cooking",
+    tags: ["pots", "stainless", "cooking"],
+  },
+  {
+    id: "kh-005",
+    name: "Kitchen Ladle Set",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "6-piece set including slotted spoon, ladle, and spatula",
+    useCase: "Serving, stirring, and cooking assistance",
+    tags: ["ladles", "utensils", "serving"],
+  },
+  {
+    id: "kh-006",
+    name: "Cutting Board Wooden",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Natural hardwood with juice groove and handle",
+    useCase: "Food preparation and chopping",
+    tags: ["cutting board", "wood", "preparation"],
+  },
+  {
+    id: "kh-007",
+    name: "Storage Container Set",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Airtight containers in 5 different sizes",
+    useCase: "Storing grains, spices, and dry goods",
+    tags: ["storage", "containers", "airtight"],
+  },
+  {
+    id: "kh-008",
+    name: "Water Filter Jug",
+    category: "kitchen-home",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "3.5L capacity with replaceable filter cartridge",
+    useCase: "Filtering drinking water for household use",
+    tags: ["filter", "water", "purification"],
+  },
+
+  // Agriculture Tools
+  {
+    id: "ag-001",
+    name: "Garden Sprayer 16L",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Backpack style with adjustable nozzle and pressure pump",
+    useCase: "Pesticide and fertilizer application in gardens and farms",
+    tags: ["sprayer", "garden", "agriculture"],
+  },
+  {
+    id: "ag-002",
+    name: "Sickle Curved Blade",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Carbon steel blade with wooden handle",
+    useCase: "Harvesting crops, cutting grass, and clearing weeds",
+    tags: ["sickle", "harvesting", "cutting"],
+  },
+  {
+    id: "ag-003",
+    name: "Garden Shovel",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Tempered steel head with fiberglass handle",
+    useCase: "Digging, transplanting, and soil preparation",
+    tags: ["shovel", "digging", "garden"],
+  },
+  {
+    id: "ag-004",
+    name: "Pruning Shears",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Bypass blade design with ergonomic grip",
+    useCase: "Trimming plants, flowers, and small branches",
+    tags: ["shears", "pruning", "trimming"],
+  },
+  {
+    id: "ag-005",
+    name: "Garden Rake",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "14-tine steel head with long wooden handle",
+    useCase: "Leveling soil, removing debris, and preparing beds",
+    tags: ["rake", "leveling", "garden"],
+  },
+  {
+    id: "ag-006",
+    name: "Watering Can 10L",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Durable plastic with removable rose head",
+    useCase: "Watering plants, seedlings, and garden beds",
+    tags: ["watering", "can", "garden"],
+  },
+  {
+    id: "ag-007",
+    name: "Hoe Garden Tool",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Forged steel blade with ash wood handle",
+    useCase: "Weeding, cultivating, and soil loosening",
+    tags: ["hoe", "weeding", "cultivating"],
+  },
+  {
+    id: "ag-008",
+    name: "Hedge Trimmer Manual",
+    category: "agriculture-tools",
+    image: "/placeholder.svg?height=300&width=300",
+    description: "Long blade shears with shock-absorbing bumpers",
+    useCase: "Shaping hedges, shrubs, and ornamental plants",
+    tags: ["trimmer", "hedge", "shaping"],
+  },
+]
+
+export function getProductsByCategory(categoryId: string): Product[] {
+  return products.filter((product) => product.category === categoryId)
+}
+
+export function getCategoryById(categoryId: string): Category | undefined {
+  return categories.find((category) => category.id === categoryId)
+}
+
+export function getProductById(productId: string): Product | undefined {
+  return products.find((product) => product.id === productId)
+}
