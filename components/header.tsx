@@ -1,8 +1,9 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { useState } from "react"
-import { Menu, X, Phone, Wrench } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const navLinks = [
@@ -21,10 +22,13 @@ export function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <Wrench className="w-6 h-6 text-primary-foreground" />
+            <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center">
+              <Image src="/webLogo.png" alt="TiwariTools logo" width={48} height={48} className="object-contain" />
             </div>
-            <span className="text-xl font-bold text-primary">TiwariTools</span>
+            <div className="flex flex-col leading-tight">
+              <span className="text-xl font-bold text-primary">TiwariTools</span>
+              <span className="text-sm text-foreground/70 -mt-0.5 text-orange-600">&PowerTools</span>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

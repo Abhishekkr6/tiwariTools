@@ -133,3 +133,73 @@
 .glass-card {
   @apply bg-card/80 backdrop-blur-sm border border-border/50 shadow-lg;
 }
+
+/* Scroll-triggered section transitions */
+.section-transition {
+  transition-property: opacity, transform, filter;
+  transition-duration: 900ms;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.section-transition-visible {
+  pointer-events: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section-transition,
+  .section-transition-visible {
+    transition-duration: 0ms !important;
+    transition-delay: 0ms !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Hero background cross-fade */
+.hero-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-bg-panel {
+  position: absolute;
+  inset: -4% 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(4px);
+  transform: scale(1.05);
+  opacity: 0;
+}
+
+.hero-bg-panel-fade {
+  animation: hero-bg-fade 36s ease-in-out infinite;
+}
+
+@keyframes hero-bg-fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.95;
+  }
+  25% {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+  30% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg-panel-fade {
+    animation: none;
+    opacity: 1;
+  }
+}

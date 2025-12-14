@@ -2,6 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { categories } from "@/data/products"
 import { ArrowRight } from "lucide-react"
+import { SectionReveal } from "@/components/section-reveal"
 
 export const metadata = {
   title: "Products - TiwariTools",
@@ -13,15 +14,15 @@ export default function ProductsPage() {
     <div className="py-12 md:py-20">
       <div className="container mx-auto px-4">
         {/* Page Header */}
-        <div className="text-center mb-12">
+        <SectionReveal as="section" className="text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Our Products</h1>
           <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             Browse our extensive collection of quality tools and supplies across all categories
           </p>
-        </div>
+        </SectionReveal>
 
         {/* Categories Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <SectionReveal as="section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {categories.map((category) => (
             <Link
               key={category.id}
@@ -52,7 +53,7 @@ export default function ProductsPage() {
               </div>
             </Link>
           ))}
-        </div>
+        </SectionReveal>
       </div>
     </div>
   )

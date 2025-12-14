@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { SectionReveal } from "@/components/section-reveal"
 
 const galleryImages = [
   { src: "/placeholder.svg?height=400&width=600", alt: "Shop Interior" },
@@ -9,7 +10,7 @@ const galleryImages = [
 
 export function ShopGallery() {
   return (
-    <section className="py-16 md:py-24">
+    <SectionReveal as="section" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -37,6 +38,6 @@ export function ShopGallery() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionReveal>
   )
 }

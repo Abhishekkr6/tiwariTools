@@ -4,6 +4,7 @@ import { categories, getProductsByCategory, getCategoryById } from "@/data/produ
 import { ProductCard } from "@/components/product-card"
 import { ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { SectionReveal } from "@/components/section-reveal"
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>
@@ -40,34 +41,36 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     <div className="py-12 md:py-20">
       <div className="container mx-auto px-4">
         {/* Back Button */}
-        <Button variant="ghost" asChild className="mb-6">
-          <Link href="/products" className="flex items-center gap-2">
-            <ArrowLeft className="w-4 h-4" />
-            Back to Categories
-          </Link>
-        </Button>
+        <SectionReveal as="section" className="mb-6 inline-flex">
+          <Button variant="ghost" asChild>
+            <Link href="/products" className="flex items-center gap-2">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Categories
+            </Link>
+          </Button>
+        </SectionReveal>
 
         {/* Page Header */}
-        <div className="mb-12">
+        <SectionReveal as="section" className="mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4">{category.name}</h1>
           <p className="text-muted-foreground text-lg max-w-2xl">{category.description}</p>
-        </div>
+        </SectionReveal>
 
         {/* Products Grid */}
         {products.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <SectionReveal as="section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {products.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
-          </div>
+          </SectionReveal>
         ) : (
-          <div className="text-center py-20">
+          <SectionReveal as="section" className="text-center py-20">
             <p className="text-muted-foreground text-lg">No products found in this category.</p>
-          </div>
+          </SectionReveal>
         )}
 
         {/* Other Categories */}
-        <div className="mt-16 pt-12 border-t border-border">
+        <SectionReveal as="section" className="mt-16 pt-12 border-t border-border">
           <h2 className="text-2xl font-bold text-foreground mb-6">Explore Other Categories</h2>
           <div className="flex flex-wrap gap-3">
             {categories
@@ -82,7 +85,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
                 </Link>
               ))}
           </div>
-        </div>
+        </SectionReveal>
       </div>
     </div>
   )

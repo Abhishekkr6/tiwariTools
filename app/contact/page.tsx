@@ -1,5 +1,6 @@
 import { MapPin, Phone, Clock, Mail, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { SectionReveal } from "@/components/section-reveal"
 
 export const metadata = {
   title: "Contact Us - TiwariTools",
@@ -36,15 +37,15 @@ export default function ContactPage() {
     <div className="py-12 md:py-20">
       <div className="container mx-auto px-4">
         {/* Page Header */}
-        <div className="text-center mb-12">
+        <SectionReveal as="section" className="text-center mb-12">
           <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-4">Contact Us</h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             Have questions about our products? Get in touch with us via WhatsApp, phone, or visit our shop
           </p>
-        </div>
+        </SectionReveal>
 
         {/* Contact Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <SectionReveal as="section" className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {contactInfo.map((item, index) => (
             <div key={index} className="glass-card rounded-2xl p-6">
               <div className="flex items-start gap-4">
@@ -68,10 +69,10 @@ export default function ContactPage() {
               </div>
             </div>
           ))}
-        </div>
+        </SectionReveal>
 
         {/* WhatsApp CTA */}
-        <div className="glass-card rounded-2xl p-8 md:p-12 text-center mb-12">
+        <SectionReveal as="section" className="glass-card rounded-2xl p-8 md:p-12 text-center mb-12">
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Quick Enquiry via WhatsApp</h2>
           <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
             The fastest way to get product information and pricing. Send us a message and we will respond promptly.
@@ -87,10 +88,10 @@ export default function ContactPage() {
               Start WhatsApp Chat
             </a>
           </Button>
-        </div>
+        </SectionReveal>
 
         {/* Map Section */}
-        <div className="glass-card rounded-2xl overflow-hidden">
+        <SectionReveal as="section" className="glass-card rounded-2xl overflow-hidden">
           <div className="p-6 border-b border-border">
             <h2 className="text-xl font-semibold text-foreground">Find Us on Map</h2>
           </div>
@@ -107,7 +108,7 @@ export default function ContactPage() {
               className="absolute inset-0 borderless-iframe"
             />
           </div>
-        </div>
+        </SectionReveal>
       </div>
     </div>
   )

@@ -1,4 +1,5 @@
 import { Shield, Truck, Banknote, Users, Award, Clock } from "lucide-react"
+import { SectionReveal } from "@/components/section-reveal"
 
 const features = [
   {
@@ -35,7 +36,7 @@ const features = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
+    <SectionReveal as="section" className="py-16 md:py-24 bg-gradient-to-b from-muted/50 to-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -61,6 +62,6 @@ export function WhyChooseUs() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionReveal>
   )
 }

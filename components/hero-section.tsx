@@ -1,10 +1,54 @@
 import { Button } from "@/components/ui/button"
+import { SectionReveal } from "@/components/section-reveal"
 import { MessageCircle, Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 
+const heroImages = [
+  "/adjustable-wrench-set-chrome.jpg",
+  "/agriculture-farming-tools-sprayer-sickle.jpg",
+  "/combination-pliers-tool.jpg",
+  "/cordless-drill-20v-power-tool.jpg",
+  "/DEKOPRO 228 Piece Socket Wrench Auto Repair Tool Combination Package Mixed Tool Set Hand Tool Kit with Plastic Toolbox Storage Case.jpeg",
+  "/download.jpeg",
+  "/electrical-tools-testers-wire-strippers.jpg",
+  "/hacksaw-frame-metal-cutting.jpg",
+  "/hand-tools-collection-hammers-wrenches.jpg",
+  "/hardware-screws-nuts-bolts-collection.jpg",
+  "/kitchen-cookware-utensils-pans.jpg",
+  "/measuring-tape-5-meter.jpg",
+  "/pipe-wrench-plumbing-tool.jpg",
+  "/power-tools-drill-grinder-collection.jpg",
+  "/professional-claw-hammer-tool.jpg",
+  "/screwdriver-set-12-piece.jpg",
+  "/Thyme & Table 32-Piece Non-Stick Cookware & Bakeware Set, Black.jpeg",
+  "/Tools.jpeg",
+  "/Top Best Tools 2018 Rankings &amp; Reviews.jpeg",
+  "/wire-cutter-heavy-duty-tool.jpg",
+] as const
+
+function HeroBackgroundCarousel() {
+  return (
+    <div className="hero-bg-wrapper" aria-hidden="true">
+      {heroImages.map((src, index) => (
+        <div
+          key={`${src}-${index}`}
+          className="hero-bg-panel hero-bg-panel-fade"
+          style={{
+            backgroundImage: `url(${encodeURI(src)})`,
+            animationDelay: `${index * 6}s`,
+          }}
+        />
+      ))}
+    </div>
+  )
+}
+
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-linear-to-br from-primary/5 via-background to-accent/5">
+    <SectionReveal as="section" className="relative overflow-hidden">
+      <HeroBackgroundCarousel />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/60 to-background/30" />
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl" />
@@ -62,6 +106,6 @@ export function HeroSection() {
           </Link>
         </div>
       </div>
-    </section>
+    </SectionReveal>
   )
 }

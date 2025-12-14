@@ -2,10 +2,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { categories } from "@/data/products"
 import { ArrowRight } from "lucide-react"
+import { SectionReveal } from "@/components/section-reveal"
 
 export function CategoryGrid() {
   return (
-    <section className="py-16 md:py-24">
+    <SectionReveal as="section" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-12">
@@ -49,6 +50,6 @@ export function CategoryGrid() {
           ))}
         </div>
       </div>
-    </section>
+    </SectionReveal>
   )
 }
