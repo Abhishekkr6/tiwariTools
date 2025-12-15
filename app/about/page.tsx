@@ -34,7 +34,7 @@ export default function AboutPage() {
               Your Trusted Partner for Quality Tools
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              ToolMart has been serving professionals and households for over two decades. We pride ourselves on
+              TiwariTools has been serving professionals and households for over two decades. We pride ourselves on
               offering the best selection of tools, power equipment, kitchen supplies, and agricultural implements at
               competitive prices.
             </p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="relative h-80 lg:h-125 rounded-2xl overflow-hidden">
-            <Image src="/placeholder.svg?height=500&width=600" alt="ToolMart Shop" fill className="object-cover" />
+            <Image src="/placeholder.svg?height=500&width=600" alt="TiwariTools Shop" fill className="object-cover" />
           </div>
         </SectionReveal>
 

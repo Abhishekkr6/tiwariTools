@@ -13,8 +13,13 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="glass-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
       {/* Image */}
-      <div className="relative h-48 overflow-hidden bg-muted">
-        <Image src={product.image || "/placeholder.svg"} alt={product.name} fill className="object-cover" />
+      <div className="relative w-full aspect-square overflow-hidden bg-muted group">
+        <Image
+          src={product.image || "/placeholder.svg"}
+          alt={product.name}
+          fill
+          className="object-contain p-4 group-hover:scale-105 transition-transform duration-300"
+        />
       </div>
 
       {/* Content */}
@@ -38,7 +43,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="mt-auto">
           <Button className="w-full bg-accent hover:bg-accent/90" asChild>
             <a
-              href={`https://wa.me/911234567890?text=${whatsappMessage}`}
+              href={`https://wa.me/916206507964?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center gap-2"
