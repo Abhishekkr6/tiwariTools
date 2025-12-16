@@ -20,7 +20,7 @@ export function SectionReveal<T extends ElementType = "section">({
 }: SectionRevealProps<T>) {
   const Component = (as || "section") as ElementType
   const elementRef = useRef<HTMLElement | null>(null)
-  const [isVisible, setIsVisible] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
 
   useEffect(() => {
     const node = elementRef.current
@@ -35,7 +35,7 @@ export function SectionReveal<T extends ElementType = "section">({
           }
         })
       },
-      { threshold: 0.2, rootMargin: "0px 0px -10% 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -5% 0px" }
     )
 
     observer.observe(node)
@@ -49,8 +49,7 @@ export function SectionReveal<T extends ElementType = "section">({
     <Component
       ref={elementRef as never}
       className={cn(
-        "section-transition opacity-0 translate-y-10",
-        isVisible && "section-transition-visible opacity-100 translate-y-0",
+        "section-transition section-transition-visible opacity-100 translate-y-0",
         className
       )}
       style={{

@@ -11,7 +11,7 @@ export function ProductCard({ product }: ProductCardProps) {
   const whatsappMessage = encodeURIComponent(`Hi, I would like to enquire about: ${product.name}`)
 
   return (
-    <div className="glass-card rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+    <div className="glass-card rounded-xl sm:rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col h-full">
       {/* Image */}
       <div className="relative w-full aspect-square overflow-hidden bg-muted group">
         <Image
