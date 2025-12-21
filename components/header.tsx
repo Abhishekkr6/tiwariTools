@@ -23,7 +23,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center">
-              <Image src="/webLogo.png" alt="TiwariTools logo" width={48} height={48} className="object-contain" />
+              <Image src="/logo.jpeg" alt="TiwariTools logo" width={48} height={48} className="object-contain" />
             </div>
             <div className="flex flex-col leading-tight">
               <span className="text-xl font-bold text-primary">TiwariTools</span>

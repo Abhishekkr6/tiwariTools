@@ -1,5 +1,6 @@
 import Link from "next/link"
-import { Wrench, MapPin, Phone, Clock, Mail } from "lucide-react"
+import Image from "next/image"
+import { MapPin, Phone, Clock, Mail } from "lucide-react"
 
 export function Footer() {
   return (
@@ -9,8 +10,8 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
-                <Wrench className="w-6 h-6 text-accent-foreground" />
+              <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center">
+                <Image src="/logo.jpeg" alt="TiwariTools logo" width={40} height={40} className="object-contain rounded-xl" />
               </div>
               <span className="text-xl font-bold">TiwariTools</span>
             </Link>
@@ -111,8 +112,8 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />
-                <a href="mailto:info@toolmart.com" className="text-primary-foreground/80 hover:text-accent text-sm">
-                  info@tiwaritools.com
+                <a href="mailto:tiwaritools18@gmail.com" className="text-primary-foreground/80 hover:text-accent text-sm">
+                  tiwaritools18@gmail.com
                 </a>
               </li>
               <li className="flex items-center gap-3">

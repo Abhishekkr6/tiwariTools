@@ -22,8 +22,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: ["info@tiwaritools.com", "sales@tiwaritools.com"],
-    links: ["mailto:info@tiwaritools.com", "mailto:sales@tiwaritools.com"],
+    details: ["tiwaritools18@gmail.com"],
+    links: ["mailto:tiwaritools18@gmail.com"],
   },
   {
     icon: Clock,
@@ -98,7 +98,7 @@ export default function ContactPage() {
           <div className="relative h-80 md:h-100 bg-muted">
             {/* Google Maps Embed Placeholder */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.234567890123!2d72.12345678901234!3d19.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA3JzI0LjQiTiA3MsKwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3583.129324085119!2d84.6766919!3d26.0946968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992c342b9e68cad%3A0xf932c3fd4048ac48!2sTiwari%20Tools%20and%20Power%20Tools!5e0!3m2!1sen!2sin!4v1766328476557!5m2!1sen!2sin"
               width="100%"
               height="100%"
               allowFullScreen
@@ -113,3 +113,5 @@ export default function ContactPage() {
     </div>
   )
 }
+
+
