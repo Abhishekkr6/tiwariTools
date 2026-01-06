@@ -13,7 +13,7 @@ export function Footer() {
               <div className="w-12 h-12 rounded-xl overflow-hidden flex items-center justify-center">
                 <Image src="/logo.jpeg" alt="TiwariTools logo" width={40} height={40} className="object-contain rounded-xl" />
               </div>
-              <span className="text-xl font-bold">TiwariTools</span>
+              <span className="text-xl font-bold">TiwariBabaTools</span>
             </Link>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Your trusted local shop for wholesale and retail tools, power tools, kitchen and agriculture supplies.
