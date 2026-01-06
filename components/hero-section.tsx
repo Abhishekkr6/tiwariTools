@@ -134,7 +134,7 @@ export function HeroSection() {
 
           {/* Browse Products Link */}
           <Link
-            href="/products"
+            href="/products/all"
             className="inline-flex items-center gap-2 mt-8 text-primary hover:text-primary/80 font-medium transition-colors group"
           >
             Browse Our Products
