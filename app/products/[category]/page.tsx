@@ -58,11 +58,13 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
 
         {/* Products Grid */}
         {products.length > 0 ? (
-          <SectionReveal as="section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-            {products.map((product) => (
-              <ProductCard key={product.id} product={product} />
+          <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+            {products.map((product, index) => (
+              <SectionReveal key={product.id} as="div" delay={index * 100}>
+                <ProductCard product={product} />
+              </SectionReveal>
             ))}
-          </SectionReveal>
+          </section>
         ) : (
           <SectionReveal as="section" className="text-center py-20">
             <p className="text-muted-foreground text-lg">No products found in this category.</p>
@@ -75,14 +77,15 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
           <div className="flex flex-wrap gap-3">
             {categories
               .filter((c) => c.id !== categoryId)
-              .map((c) => (
-                <Link
-                  key={c.id}
-                  href={`/products/${c.id}`}
-                  className="px-4 py-2 glass-card rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
-                >
-                  {c.name}
-                </Link>
+              .map((c, index) => (
+                <SectionReveal key={c.id} as="div" delay={index * 100}>
+                  <Link
+                    href={`/products/${c.id}`}
+                    className="px-4 py-2 glass-card rounded-full text-sm font-medium hover:bg-primary hover:text-primary-foreground transition-colors inline-block"
+                  >
+                    {c.name}
+                  </Link>
+                </SectionReveal>
               ))}
           </div>
         </SectionReveal>

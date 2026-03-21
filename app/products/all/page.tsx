@@ -34,11 +34,13 @@ export default function AllProductsPage() {
         </SectionReveal>
 
         {/* Products Grid */}
-        <SectionReveal as="section" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
+          {products.map((product, index) => (
+            <SectionReveal key={product.id} as="div" delay={index * 100}>
+              <ProductCard product={product} />
+            </SectionReveal>
           ))}
-        </SectionReveal>
+        </section>
       </div>
     </div>
   )

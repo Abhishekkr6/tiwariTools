@@ -1,61 +1,36 @@
 "use client"
 
-import { useEffect, useRef, useState, type ComponentPropsWithoutRef, type ElementType, type ReactNode } from "react"
+import { type ReactNode } from "react"
+import { motion, type HTMLMotionProps } from "framer-motion"
 import { cn } from "@/lib/utils"
 
-type SectionRevealProps<T extends ElementType> = {
-  as?: T
+type SectionRevealProps = {
+  as?: "section" | "div"
   delay?: number
   className?: string
   children: ReactNode
-} & Omit<ComponentPropsWithoutRef<T>, "as" | "className" | "children">
+} & HTMLMotionProps<any>
 
-export function SectionReveal<T extends ElementType = "section">({
-  as,
+export function SectionReveal({
+  as = "section",
   delay = 0,
   className,
   children,
-  style,
   ...rest
-}: SectionRevealProps<T>) {
-  const Component = (as || "section") as ElementType
-  const elementRef = useRef<HTMLElement | null>(null)
-  const [isVisible, setIsVisible] = useState(true)
-
-  useEffect(() => {
-    const node = elementRef.current
-    if (!node) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true)
-            observer.unobserve(entry.target)
-          }
-        })
-      },
-      { threshold: 0.1, rootMargin: "0px 0px -5% 0px" }
-    )
-
-    observer.observe(node)
-
-    return () => {
-      observer.disconnect()
-    }
-  }, [])
+}: SectionRevealProps) {
+  const Component = as === "div" ? motion.div : motion.section;
 
   return (
     <Component
-      ref={elementRef as never}
-      className={cn(
-        "section-transition section-transition-visible opacity-100 translate-y-0",
-        className
-      )}
-      style={{
-        ...(style || {}),
-        transitionDelay: style?.transitionDelay ?? `${delay}ms`,
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-10%" }}
+      transition={{
+        duration: 0.9,
+        ease: [0.22, 1, 0.36, 1],
+        delay: delay / 1000,
       }}
+      className={cn("w-full relative", className)}
       {...rest}
     >
       {children}

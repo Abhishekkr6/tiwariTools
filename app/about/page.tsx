@@ -49,17 +49,17 @@ export default function AboutPage() {
         </SectionReveal>
 
         {/* Stats */}
-        <SectionReveal as="section" className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           {highlights.map((item, index) => (
-            <div key={index} className="glass-card rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+            <SectionReveal as="div" delay={index * 150} key={index} className="glass-card rounded-2xl p-8 text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 transition-transform hover:scale-110">
                 <item.icon className="w-8 h-8 text-primary" />
               </div>
               <h3 className="text-3xl font-bold text-foreground mb-2">{item.label}</h3>
               <p className="text-muted-foreground">{item.description}</p>
-            </div>
+            </SectionReveal>
           ))}
-        </SectionReveal>
+        </section>
 
         {/* Our Values */}
         <SectionReveal as="section" className="glass-card rounded-2xl p-8 md:p-12">

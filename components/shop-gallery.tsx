@@ -1,5 +1,8 @@
+"use client"
+
 import Image from "next/image"
 import { SectionReveal } from "@/components/section-reveal"
+import { motion } from "framer-motion"
 
 const galleryImages = [
   { src: "/placeholder.svg?height=400&width=600", alt: "Shop Interior" },
@@ -21,22 +24,43 @@ export function ShopGallery() {
         </div>
 
         {/* Gallery Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.2 }
+            }
+          }}
+        >
           {galleryImages.map((image, index) => (
-            <div key={index} className="relative h-64 md:h-80 rounded-2xl overflow-hidden group">
+            <motion.div 
+              key={index} 
+              variants={{
+                hidden: { opacity: 0, scale: 0.95 },
+                visible: { opacity: 1, scale: 1, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } }
+              }}
+              className="relative h-64 md:h-80 rounded-2xl overflow-hidden group shadow-lg"
+            >
               <Image
                 src={image.src || "/placeholder.svg"}
                 alt={image.alt}
                 fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white font-medium">{image.alt}</span>
-              </div>
-            </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <motion.div 
+                className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform translate-y-4 group-hover:translate-y-0"
+              >
+                <span className="text-white font-semibold text-lg drop-shadow-md">{image.alt}</span>
+              </motion.div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </SectionReveal>
   )

@@ -1,10 +1,15 @@
 "use client"
 
 import { Phone, MessageCircle } from "lucide-react"
-
+import { motion } from "framer-motion"
 export function MobileBottomBar() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 md:hidden z-50 glass border-t border-border">
+    <motion.div 
+      initial={{ y: 100 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.2, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed bottom-0 left-0 right-0 md:hidden z-50 glass border-t border-border"
+    >
       <div className="grid grid-cols-2">
         <a
           href="tel:+916206507964"
@@ -23,6 +28,6 @@ export function MobileBottomBar() {
           <span>WhatsApp</span>
         </a>
       </div>
-    </div>
+    </motion.div>
   )
 }

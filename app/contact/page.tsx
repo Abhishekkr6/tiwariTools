@@ -45,11 +45,11 @@ export default function ContactPage() {
         </SectionReveal>
 
         {/* Contact Cards */}
-        <SectionReveal as="section" className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {contactInfo.map((item, index) => (
-            <div key={index} className="glass-card rounded-2xl p-6">
+            <SectionReveal as="div" delay={index * 150} key={index} className="glass-card rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0 transition-transform hover:scale-110">
                   <item.icon className="w-6 h-6 text-primary" />
                 </div>
                 <div>
@@ -67,9 +67,9 @@ export default function ContactPage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </SectionReveal>
           ))}
-        </SectionReveal>
+        </section>
 
         {/* WhatsApp CTA */}
         <SectionReveal as="section" className="glass-card rounded-2xl p-8 md:p-12 text-center mb-12">

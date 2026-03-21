@@ -1,5 +1,8 @@
+"use client"
+
 import { Shield, Truck, Banknote, Users, Award, Clock } from "lucide-react"
 import { SectionReveal } from "@/components/section-reveal"
+import { motion } from "framer-motion"
 
 const features = [
   {
@@ -47,20 +50,41 @@ export function WhyChooseUs() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <motion.div 
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: {
+              opacity: 1,
+              transition: { staggerChildren: 0.1 }
+            }
+          }}
+        >
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
-              className="glass-card rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              variants={{
+                hidden: { opacity: 0, scale: 0.95, y: 20 },
+                visible: { 
+                  opacity: 1, 
+                  scale: 1, 
+                  y: 0, 
+                  transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } 
+                }
+              }}
+              className="glass-card rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 block h-full"
             >
-              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 transition-transform group-hover:scale-110">
                 <feature.icon className="w-6 h-6 text-primary" />
               </div>
               <h3 className="text-lg font-semibold text-foreground mb-2">{feature.title}</h3>
               <p className="text-muted-foreground text-sm">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </SectionReveal>
   )
