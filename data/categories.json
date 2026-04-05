@@ -1,0 +1,44 @@
+[
+  {
+    "id": "hand-tools",
+    "name": "Hand Tools",
+    "description": "Essential manual tools for every professional and DIY enthusiast",
+    "icon": "🔧",
+    "image": "/hand-tools-collection-hammers-wrenches.jpg"
+  },
+  {
+    "id": "power-tools",
+    "name": "Power Tools",
+    "description": "High-performance electric and battery-powered tools",
+    "icon": "⚡",
+    "image": "/power-tools-drill-grinder-collection.jpg"
+  },
+  {
+    "id": "electrical-tools",
+    "name": "Electrical Tools",
+    "description": "Specialized tools for electrical work and wiring",
+    "icon": "💡",
+    "image": "/electrical-tools-testers-wire-strippers.jpg"
+  },
+  {
+    "id": "hardware-items",
+    "name": "Hardware Items",
+    "description": "Fasteners, fittings, and essential hardware supplies",
+    "icon": "🔩",
+    "image": "/hardware-screws-nuts-bolts-collection.jpg"
+  },
+  {
+    "id": "kitchen-home",
+    "name": "Kitchen & Home Utility",
+    "description": "Quality cookware and home utility items",
+    "icon": "🍳",
+    "image": "/kitchen-cookware-utensils-pans.jpg"
+  },
+  {
+    "id": "agriculture-tools",
+    "name": "Agriculture Tools",
+    "description": "Farming and gardening equipment for all scales",
+    "icon": "🌾",
+    "image": "/agriculture-farming-tools-sprayer-sickle.jpg"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "hero": {
+    "badge": "Trusted Local Supplier",
+    "headline": "Wholesale & Retail Tools, Power Tools, Kitchen & Agriculture Supplies",
+    "subtext": "Your trusted local shop serving professionals and households with quality tools and supplies at competitive prices.",
+    "whatsapp": "916206507964",
+    "whatsappMessage": "Hi, I would like to enquire about your products",
+    "phone": "+916206507964"
+  },
+  "about": {
+    "title": "Your Trusted Partner for Quality Tools",
+    "description1": "TiwariTools has been serving professionals and households for over two decades. We pride ourselves on offering the best selection of tools, power equipment, kitchen supplies, and agricultural implements at competitive prices.",
+    "description2": "Whether you are a contractor looking for wholesale deals or a homeowner needing quality tools for DIY projects, we have got you covered with our extensive inventory and knowledgeable staff.",
+    "image": "/placeholder.svg?height=500&width=600"
+  },
+  "contact": {
+    "address": "Main Market Road, Near City Center, New Delhi 110001",
+    "email": "info@tiwaritools.com",
+    "hours": "Monday - Saturday: 9:00 AM - 8:00 PM\nSunday: 10:00 AM - 2:00 PM"
+  }
+}

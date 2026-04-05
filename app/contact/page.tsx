@@ -1,6 +1,7 @@
 import { MapPin, Phone, Clock, Mail, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SectionReveal } from "@/components/section-reveal"
+import contentData from "@/data/content.json"
 
 export const metadata = {
   title: "Contact Us - TiwariTools",
@@ -11,24 +12,24 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Visit Our Shop",
-    details: ["Bhalu market , Mora road , Bhagwanpur Hatt", "Siwan, Bihar - 841408"],
+    details: [contentData.contact.address],
   },
   {
     icon: Phone,
     title: "Call Us",
-    details: ["+91 6206507964", "+91 9801481529"],
-    links: ["tel:+916206507964", "tel:+919801481529"],
+    details: [contentData.hero.phone],
+    links: [`tel:${contentData.hero.phone}`],
   },
   {
     icon: Mail,
     title: "Email Us",
-    details: ["tiwaritools18@gmail.com"],
-    links: ["mailto:tiwaritools18@gmail.com"],
+    details: [contentData.contact.email],
+    links: [`mailto:${contentData.contact.email}`],
   },
   {
     icon: Clock,
     title: "Business Hours",
-    details: ["Monday - Saturday: 8:00 AM - 9:00 PM", "Sunday: 10:00 AM - 4:00 PM"],
+    details: contentData.contact.hours.split('\n'),
   },
 ]
 
@@ -79,7 +80,7 @@ export default function ContactPage() {
           </p>
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8" asChild>
             <a
-              href="https://wa.me/916206507964?text=Hi, I would like to enquire about your products"
+              href={`https://wa.me/${contentData.hero.whatsapp}?text=${encodeURIComponent(contentData.hero.whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"

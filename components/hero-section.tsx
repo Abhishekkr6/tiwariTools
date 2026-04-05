@@ -5,6 +5,7 @@ import { SectionReveal } from "@/components/section-reveal"
 import { MessageCircle, Phone, ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import contentData from "@/data/content.json"
 
 const heroImages = [
   "/adjustable-wrench-set-chrome.jpg",
@@ -116,7 +117,7 @@ export function HeroSection() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 text-accent font-medium text-sm mb-6"
           >
             <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            Trusted Local Supplier
+            {contentData.hero.badge}
           </motion.div>
 
           {/* Headline */}
@@ -124,8 +125,7 @@ export function HeroSection() {
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="text-3xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight mb-6 text-balance"
           >
-            Wholesale & Retail <span className="text-primary">Tools</span>,{" "}
-            <span className="text-accent">Power Tools</span>, Kitchen & Agriculture Supplies
+            {contentData.hero.headline}
           </motion.h1>
 
           {/* Subtext */}
@@ -133,8 +133,7 @@ export function HeroSection() {
             variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 text-pretty"
           >
-            Your trusted local shop serving professionals and households with quality tools and supplies at competitive
-            prices.
+            {contentData.hero.subtext}
           </motion.p>
 
           {/* CTAs */}
@@ -144,7 +143,7 @@ export function HeroSection() {
           >
             <Button size="lg" className="bg-accent hover:bg-accent/90 text-lg px-8 shadow-lg shadow-accent/20 transition-all hover:-translate-y-1" asChild>
               <a
-                href="https://wa.me/916206507964?text=Hi, I would like to enquire about your products"
+                href={`https://wa.me/${contentData.hero.whatsapp}?text=${encodeURIComponent(contentData.hero.whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
@@ -154,7 +153,7 @@ export function HeroSection() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 bg-transparent transition-all hover:-translate-y-1" asChild>
-              <a href="tel:+916206507964" className="flex items-center gap-2">
+              <a href={`tel:${contentData.hero.phone}`} className="flex items-center gap-2">
                 <Phone className="w-5 h-5" />
                 Call Now
               </a>

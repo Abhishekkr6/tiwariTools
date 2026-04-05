@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { CheckCircle, Users, Clock, Award } from "lucide-react"
 import { SectionReveal } from "@/components/section-reveal"
+import contentData from "@/data/content.json"
 
 export const metadata = {
   title: "About Us - TiwariTools",
@@ -31,20 +32,17 @@ export default function AboutPage() {
         <SectionReveal as="section" className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
             <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
-              Your Trusted Partner for Quality Tools
+              {contentData.about.title}
             </h1>
             <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-              TiwariTools has been serving professionals and households for over two decades. We pride ourselves on
-              offering the best selection of tools, power equipment, kitchen supplies, and agricultural implements at
-              competitive prices.
+              {contentData.about.description1}
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Whether you are a contractor looking for wholesale deals or a homeowner needing quality tools for DIY
-              projects, we have got you covered with our extensive inventory and knowledgeable staff.
+              {contentData.about.description2}
             </p>
           </div>
           <div className="relative h-80 lg:h-125 rounded-2xl overflow-hidden">
-            <Image src="/placeholder.svg?height=500&width=600" alt="TiwariTools Shop" fill className="object-cover" />
+            <Image src={contentData.about.image} alt="TiwariTools Shop" fill className="object-cover" />
           </div>
         </SectionReveal>
 
