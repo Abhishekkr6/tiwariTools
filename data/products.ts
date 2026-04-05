@@ -21,3 +21,15 @@ export type Category = {
 
 export const categories: Category[] = categoriesData as Category[];
 export const products: Product[] = productsData as Product[];
+
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter((p) => p.category === category);
+}
+
+export function getCategoryById(id: string): Category | undefined {
+  return categories.find((c) => c.id === id);
+}
+
+export function getProductById(id: string): Product | undefined {
+  return products.find((p) => p.id === id);
+}
